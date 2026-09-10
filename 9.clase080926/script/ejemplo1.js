@@ -1,12 +1,4 @@
 alert("Bienvenido a la clase de Sistemas");
-//Crear un programa que gestione una lista de tareas
-//debe permitir!
-//1.Agregar una tarea
-//2.Eliminar una tarea
-//3.Mostrar todas las tareas
-//4.Marcar una tarea como completada
-//5.Mostrar las tareas incompletas
-//Lista de tareas
 let tareas=[];
 function agregarTarea(tarea="",estado="Incompleto"){
     if (tarea ===""){
@@ -24,9 +16,16 @@ function eliminarTarea(indice){
 }
 function mostrarTareas(){
     console.log("Mostrando Lista de tareas:");
+    const contenedor=document.getElementById("respuesta");
+    let respuestaHtml = "";
     tareas.forEach((tarea, indice) => {
         console.log(`${indice+1}. [${tarea.completada }] ${tarea.descripcion}`);
+        respuestaHtml = `<ul>`;
+        respuestaHtml += `<li>${indice + 1}.[${tarea.completada}] ${tarea.descripcion}`;
+        respuestaHtml += `</ul>`;
     });
+    respuestaHtml += "</ul>";
+    contenedor.innerHTML = respuestaHtml;
 }
 
 //Adicionar las tareas
@@ -35,3 +34,4 @@ agregarTarea("Hacer ejercicio","Completado");
 agregarTarea("Estudiar JavaScript","Incompleto");
 agregarTarea("Subir a GitHub","Incompleto");
 mostrarTareas();
+

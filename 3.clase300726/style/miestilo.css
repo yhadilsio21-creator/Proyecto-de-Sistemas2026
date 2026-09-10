@@ -1,0 +1,33 @@
+body{
+    background-image: url(../img/fondo3.jpg);
+    background-color: hsl(194, 84%, 55%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+}
+.titulo{
+    color: green;
+    text-align: center;
+}
+.caja{
+    background-color: hsl(251, 93%, 48%);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid #373737;
+    width: 350px;
+    height: 60px;
+}
+.caja-enlinea{
+    display:inline; 
+}
+.caja-bloque{
+    display:block; 
+    background-color: red;
+}
+.caja-enlinea-bloque{
+    display:inline-block;
+    background-color: blue;
+}

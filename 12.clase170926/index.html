@@ -1,36 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Listado de Estudiantes</title>
     <link rel="stylesheet" href="../assets/css/miestilo11.css">
 </head>
 <body>
-    <h1 class="titulo">Creacion de Tabla</h1>
-    <h2 class="titulo1">Listado de Estudiantes</h2>
-    <table>
-        <thead>
-<tr>
-    <th>Nro</th>
-    <th>Nombre</th>
-    <th>Apellidos</th>
-    <th>Fecha de Nacimiento</th>
-    <th>Edad</th>
-    <th>Genero</th>
-</tr>
-    </thead>
-    <tbody id="datos">
-<tr>
-    <td>1</td>
-    <td>Abril</td>
-    <td>Chambi</td>
-    <td>12/09/2000</td>
-    <td>26</td>
-    <td>Femenino</td>
-</tr>
-    </tbody>
-    </table>
+
+    <header>
+        <h1 class="titulo">Creación de Tabla</h1>
+        <h2 class="titulo1">Listado de Estudiantes</h2>
+    </header>
+
+    <main>
+        <section class="formulario-seccion">
+            <h3>Registrar nueva persona</h3>
+            
+            <div class="control-formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre">
+            </div>
+
+            <div class="control-formulario">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" placeholder="Ingrese su apellido">
+            </div>
+
+            <div class="control-formulario">
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" min="0" max="120" placeholder="Ingrese su edad">
+            </div>
+
+            <div class="control-formulario">
+                <label for="genero">Género:</label>
+                <select id="genero">
+                    <option value="">Seleccione...</option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Otro">Otro</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="Adicionar()">Adicionar</button>
+        </section>
+
+        <section class="tabla-seccion">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nro</th>
+                        <th>Nombre</th>
+                        <th>Apellidos</th>
+                        <th>Edad</th>
+                        <th>Género</th>
+                    </tr>
+                </thead>
+                <tbody id="datos">
+                    <tr>
+                        <td>1</td>
+                        <td>Abril</td>
+                        <td>Chambi</td>
+                        <td>26</td>
+                        <td>Femenino</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
     <script src="./Script/Ejemplo1.js"></script>
 </body>
 </html>
